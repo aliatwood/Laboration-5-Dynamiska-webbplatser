@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diagram</title>
+    <script type="module" src="./main.js"></script>
+    <link rel="stylesheet" href="">
 </head>
 <body>
     <header>
@@ -16,7 +18,23 @@
         </nav>
     </header>
 
-    <main></main>
+    <main>
+        <h1>Kursstatistik HT25</h1>
+
+        <button id="visakurserknapp">Visa top 6 kurser</button>
+
+        <div>
+            <h2>6 mest sökta kurser</h2>
+            <canvas id="kursdiagram"></canvas>
+        </div>
+
+        <div>
+            <h2>5 mest sökta program</h2>
+            <canvas id="programdiagram"></canvas>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="diagram.js"></script>
     
 </body>
 </html>

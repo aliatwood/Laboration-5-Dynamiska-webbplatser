@@ -1,0 +1,8 @@
+@use "variables" as *;
+
+body{
+    font-family: $font-main;
+}
+.visakurserknapp{
+    background-color: yellow !important;
+}
