@@ -1,0 +1,26 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+header{
+    background-color: $flash-red;
+    padding: $spacing-medium;
+
+    .meny{
+        @include flex-center;
+        gap: $spacing-medium;
+    }
+
+    a{
+        color: $text-dark;
+        font-size: 1.1rem;
+        text-decoration: none;
+        font-family: $font-main;
+        font-weight: bold;
+    }
+
+    @media(max-width: $breakpoint-mobile) {
+        .meny{
+            flex-direction: column;
+        }
+    }
+}

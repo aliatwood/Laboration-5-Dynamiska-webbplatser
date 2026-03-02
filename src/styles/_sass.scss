@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+main{
+    padding: $spacing-large;
+
+    h1, h2{
+        font-family: $font-heading;
+        margin-bottom: $spacing-medium;
+    }
+
+    p, ul{
+        font-family: $font-main;
+        line-height: 1.6;
+        max-width: 400px;
+        margin-bottom: $spacing-medium;
+    }
+
+    ul{
+        padding-left: $spacing-medium;
+        list-style-type: disc;
+    }
+
+    section{
+        margin-bottom: $spacing-large;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    main{
+        background-color: $theme-dark-background;
+        color: $theme-dark-text;
+    }
+}

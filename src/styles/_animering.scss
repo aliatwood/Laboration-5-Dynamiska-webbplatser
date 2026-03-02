@@ -1,0 +1,159 @@
+@use "variables" as *;
+
+body{
+    animation: backgroundColorChange 5s linear infinite;
+}
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: unset;
+        animation: backgroundColorChange 5s linear infinite;
+    }
+    main{
+        background-color: transparent;
+    }
+}
+
+@keyframes backgroundColorChange{
+    0%{
+        background-color: #1a1a2e;
+    }
+    33%{
+        background-color: #2d1b33;
+    }
+    67%{
+        background-color: #1b3a2d;
+    }
+    100%{
+        background-color: #1a1a2e;
+    }
+}
+
+button{
+    background-color: $flash-red;
+    border-radius: 8px;
+    color: $text-light;
+    font-size: 1.5rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &.spinning{
+        animation: spin 2s;     
+    }
+
+    @keyframes spin{
+    0%{
+        
+    }
+    25%{
+        transform: rotate(90deg);
+        scale: 1;
+        background-color: green;
+        color: #FF69B4;
+    }
+    50%{
+        transform: rotate(180deg);
+        scale: 1.5;
+        background-color: blue;
+        color: #FF6600;
+    }
+    75%{
+        transform: rotate(270deg);
+        scale: 1;
+        background-color: yellow;
+        color: #4B0082;
+    }
+    100%{
+        transform: rotate(360deg);
+        scale: 2;
+        background-color: #FF6B6B;
+    }
+}
+
+}
+img{
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin-bottom: $spacing-small;
+    border-radius: 5px;
+    animation: pulse 3s linear infinite;
+    transition: width 2s linear 200ms, box-shadow 1s ease;
+}
+img:hover{
+    width: 430px;
+    max-width: 430px;
+    box-shadow: 0px 0px 40px 10px #FF6B6B;
+    cursor: pointer;
+
+}
+.img-container{
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+@keyframes pulse{
+    0%{
+
+    }
+    50%{
+        box-shadow: 0px 0px 40px 10px rgb(15, 141, 15);
+    }
+    100%{
+        box-shadow: 0px 0px 40px 10px rgb(94, 86, 216);
+    }
+}
+
+.lightbulb{
+    font-size: 1.5rem;
+    position: absolute;
+    animation: float 5s linear infinite;
+    top: -30px;
+    left: -30px;
+}
+@keyframes float{
+    0%{
+        transform: translate(0, 0);
+    }
+    25%{
+        transform: translate(325px, 0);
+    }
+    50%{
+        transform: translate(325px, 430px);
+    }
+    75%{
+        transform: translate(0, 430px);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+
+.quote{
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    animation: quote 10s ease infinite;
+}
+
+@keyframes quote{
+    0%{
+        letter-spacing: 0px;
+    }
+    30%{
+        letter-spacing: 10px;
+    }
+    60%{
+        letter-spacing: 0px;
+    }
+    100%{
+        letter-spacing: 0px;
+    }
+}

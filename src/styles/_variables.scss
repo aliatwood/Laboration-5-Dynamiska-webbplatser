@@ -1,0 +1,43 @@
+//THe flash
+$flash-red: #ff0000;
+$flash-yellow: #ffea00;
+
+//Reverse flash
+$reverse-yellow: #fff200;
+$reverse-red: #b20000;
+
+//zoom
+$zoom-dark: #1a1a1a;
+$zoom-purple: #7f00ff;
+
+//Savitar
+$savitar-orange: #ff6600;
+$savitar-dark: #330000;
+
+//textfärger
+$text-light: #ffffff;
+$text-dark: #000000;
+
+// Bakgrundsfärger
+$background-light: #fdf6f0;
+$background-dark: #121212;
+
+//Typografi
+$font-main: "Arial, sans-serif";
+$font-heading: "Verdana, sans-serif";
+
+//mellanrum
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 32px;
+
+//media quary
+$breakpoint-desktop: 1023px;
+$breakpoint-mobile: 600px;
+
+//teman
+$theme-light-background: $background-light;
+$theme-light-text: $text-dark;
+
+$theme-dark-background: $background-dark;
+$theme-dark-text: $text-light;
