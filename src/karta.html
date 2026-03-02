@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karta</title>
+    <script type="module" src="./karta.js"></script>
+    <link rel="icon" href="bilder/favicon.ico">
+    <link rel="stylesheet" href="styles/styles.scss">
 </head>
 <body>
     <header>
@@ -17,7 +20,14 @@
     </header>
 
     <main>
+        <form id="sökformulär">
+            <label for="search">Sök:</label>
+            <input type="text" id="search" required>
 
+            <button type="submit">Sök</button>
+        </form>
+
+        <div id="karta"></div>
         
     </main>
 </body>
