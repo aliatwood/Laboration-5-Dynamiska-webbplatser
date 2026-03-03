@@ -17,3 +17,16 @@ button{
     margin: 20px auto;
     display: block;
 }
+
+#jsdoc{
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+
+    &:hover{
+        background-color: #555;
+    }
+}
