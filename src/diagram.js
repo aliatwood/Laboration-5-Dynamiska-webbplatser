@@ -1,3 +1,5 @@
+import './styles/styles.scss'
+
 const button = document.getElementById("visakurserknapp");
 const sDiagram = document.getElementById("kursdiagram");
 

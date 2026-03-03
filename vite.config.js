@@ -22,7 +22,9 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "src/index.html"),
         sass: resolve(__dirname, "src/sass.html"),
-        animering: resolve(__dirname, "src/animering.html")
+        animering: resolve(__dirname, "src/animering.html"),
+        diagram: resolve(__dirname, "src/diagram.html"),
+        karta: resolve(__dirname, "src/karta.html")
       }
     }
   }

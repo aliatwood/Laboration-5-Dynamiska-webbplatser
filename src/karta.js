@@ -1,3 +1,5 @@
+import './styles/styles.scss'
+
 /**
  * @file karta.js
  * @description En dynamisk karta med leaflet och nominatim api.
