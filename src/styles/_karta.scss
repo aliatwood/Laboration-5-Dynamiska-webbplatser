@@ -1,19 +1,20 @@
 @use "variables" as *;
 
 body{
-    font-family: $font-main;
+  font-family: $font-main;
 }
-button{
-    background-color: #36a2eb;;
-    font-size: 26px;
 
-    &:hover{
-        background-color: #2b85c6;
-    }
+#karta{
+  height: 500px;
+  width: 100%;
+  margin-top: 20px;
 }
-#kursdiagram, #programdiagram {
-    width: 800px;
-    height: 500px;
-    margin: 20px auto;
-    display: block;
+
+#search{
+  border-radius: 8px;
+  width: auto;
+  height: 25px;
+  width: 300px;
+  padding: 4px 8px;
+  margin-right: 10px;
 }
