@@ -1,1 +1,0 @@
-import"./styles-Cv1bCd4m.js";const n=document.querySelector("button");n.addEventListener("click",()=>{n.classList.add("spinning"),n.addEventListener("animationend",()=>{n.classList.remove("spinning")},{once:!0})});
