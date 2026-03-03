@@ -1,50 +1,57 @@
-import './styles/styles.scss'
-
 /**
  * @file karta.js
  * @description En dynamisk karta med leaflet och nominatim api.
  */
 
+import './styles/styles.scss'
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+
 /**
  * element för sökfält
+ * @type {HTMLInputElement}
  */
 const searchEl = document.getElementById("search");
 
 /**
  * element för lattitude
+ * @type {HTMLInputElement}
  */
 const latEl = document.getElementById("lat");
 
 /**
  * element för longitude
+ * @type {HTMLInputElement}
  */
 const lonEl = document.getElementById("lon");
 
 /**
  * element för knapp
+ * @type {HTMLInputElement}
  */
 const buttonEl = document.getElementById("knapp");
 
 /**
  * element för sökformulär
+ * @type {HTMLInputElement}
  */
 const formEl = document.getElementById("sökformulär");
 
 /**
  * markör på sidan som tar bort tidigare markör(om den finns) innan en ny sätts
+ * @type {L.marker|undefined}
  */
 let marker;
 
-import L from "leaflet";
-import "leaflet/dist/leaflet.css";
-
 /**
  * leaflet kartan
+ * @type {L.map}
  */
 const map = L.map("karta").setView([0, 0], 2);
 
 /**
  * OpenStreetMap tile layer
+ * @type {L.tileLayer}
  */
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: '&copy; OpenStreetMap contributors'
@@ -54,7 +61,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
  * Hämtar koordinater från en plats från nominatim api och uppdaterar markören
  * @async
  * @function
- * @returns JSON-data från nominatim api eller undefined vid erroor
+ * @returns {Promise<Array|undefined} JSON-data från nominatim api eller undefined vid erroor
  */
 async function getData() {
   try{
@@ -90,6 +97,7 @@ async function getData() {
 /**
  * La till ett submitevent istället för en klick
  * stoppar standarbeteendet och kallar till slut getdata funktionen
+ * @param {SubmitEvent} e
  */
 formEl.addEventListener("submit", async (e) => {
   e.preventDefault();
