@@ -1,14 +1,39 @@
+/**
+ * @file karta.js
+ * @description En dynamisk karta med leaflet och nominatim api.
+ */
+
+/**
+ * element för sökfält
+ */
 const searchEl = document.getElementById("search");
+
+/**
+ * element för knapp
+ */
 const buttonEl = document.getElementById("knapp");
+
+/**
+ * element för sökformulär
+ */
 const formEl = document.getElementById("sökformulär");
 
+/**
+ * markör på sidan som tar bort tidigare markör(om den finns) innan en ny sätts
+ */
 let marker;
 
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
+/**
+ * leaflet kartan
+ */
 const map = L.map("karta").setView([0, 0], 2);
 
+/**
+ * OpenStreetMap tile layer
+ */
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
