@@ -4,7 +4,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
   root: 'src',
-  base: '/Laboration-4-Grafiska-effekter-med-CSS/',
+  base: '/Laboration-5-Dynamiska-webbplatser/',
   plugins: [
     ViteImageOptimizer({
       jpg: {
