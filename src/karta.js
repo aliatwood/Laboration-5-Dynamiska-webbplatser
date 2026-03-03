@@ -9,6 +9,16 @@
 const searchEl = document.getElementById("search");
 
 /**
+ * element för lattitude
+ */
+const latEl = document.getElementById("lat");
+
+/**
+ * element för longitude
+ */
+const lonEl = document.getElementById("lon");
+
+/**
  * element för knapp
  */
 const buttonEl = document.getElementById("knapp");
@@ -38,6 +48,12 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
+/**
+ * Hämtar koordinater från en plats från nominatim api och uppdaterar markören
+ * @async
+ * @function
+ * @returns JSON-data från nominatim api eller undefined vid erroor
+ */
 async function getData() {
   try{
     let query = encodeURIComponent(searchEl.value);
@@ -56,6 +72,9 @@ async function getData() {
       if(marker) map.removeLayer(marker);
 
       marker = L.marker([lat, lon]).addTo(map).bindPopup(searchEl.value).openPopup();
+
+      latEl.textContent = lat;
+      lonEl.textContent = lon;
     }
     console.log(data);
 
@@ -66,6 +85,10 @@ async function getData() {
   }
 }
 
+/**
+ * La till ett submitevent istället för en klick
+ * stoppar standarbeteendet och kallar till slut getdata funktionen
+ */
 formEl.addEventListener("submit", async (e) => {
   e.preventDefault();
   await getData();
