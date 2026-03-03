@@ -61,7 +61,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
  * Hämtar koordinater från en plats från nominatim api och uppdaterar markören
  * @async
  * @function
- * @returns {Promise<Array|undefined} JSON-data från nominatim api eller undefined vid erroor
+ * @returns {Promise<Array>|undefined} JSON-data från nominatim api eller undefined vid erroor
  */
 async function getData() {
   try{
