@@ -4,7 +4,7 @@ body{
     font-family: $font-main;
 }
 button{
-    background-color: #36a2eb;;
+    background-color: #36a2eb;
     font-size: 26px;
 
     &:hover{
@@ -12,7 +12,8 @@ button{
     }
 }
 #kursdiagram, #programdiagram {
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     height: 500px;
     margin: 20px auto;
     display: block;
@@ -28,5 +29,25 @@ button{
 
     &:hover{
         background-color: #555;
+    }
+}
+
+@media (max-width: 1023px) {
+    #kursdiagram, #programdiagram{
+        width: 100%;
+        height: 400px;
+    }
+    .meny{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    #kursdiagram, #programdiagram{
+        width: 100%;
+        height: 270px;
+    }
+    button{
+        width: 100%;
     }
 }
